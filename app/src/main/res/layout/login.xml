@@ -20,12 +20,12 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/gambar"
         android:layout_centerInParent="true"
-        android:layout_marginTop="-38dp"
+        android:layout_marginTop="-60dp"
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/holtwood"
         android:text="Inventory Control"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:textSize="25dp" />
 
     <ImageView
         android:id="@+id/gambar"
@@ -43,6 +43,7 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="-22dp"
         android:text="LOGIN"
+        android:fontFamily="@font/brygada"
         android:textColor="@color/black"
         android:textSize="27dp"
         android:textStyle="bold" />
@@ -116,7 +117,7 @@
         android:layout_centerInParent="true"
         android:text="LOGIN"
         android:fontFamily="@font/brygada"
-        android:textSize="16sp"/>
-
+        android:textSize="16sp"
+        />
 
 </RelativeLayout>
