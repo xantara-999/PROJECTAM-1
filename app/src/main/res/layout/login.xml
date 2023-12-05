@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bcklog"
+        android:layout_height="457dp"
+        android:background="@drawable/bottom_background"
         android:layout_alignParentBottom="true"/>
 
     <TextView
