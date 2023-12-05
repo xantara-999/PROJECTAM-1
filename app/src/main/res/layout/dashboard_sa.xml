@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Add_Produk"
     android:background="@color/purple">
 
     <ImageView
@@ -38,32 +40,20 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:fontFamily="@font/inter"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="80dp"/>
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name User"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:fontFamily="@font/inter"
-        android:textSize="40dp"
-        android:layout_marginLeft="50dp"
+        android:textSize="40sp"
+        android:layout_marginLeft="40dp"
         android:layout_below="@+id/hello"/>
 
-
-    <TextView
-        android:id="@+id/viewemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hello"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="57dp"
-        android:textSize="30dp"
-        android:fontFamily="@font/interextrab"
-        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/btn_search"
@@ -86,7 +76,7 @@
         android:text="Cari Produk"
         android:textColor="@color/white"
         android:fontFamily="@font/inknut"
-        android:textSize="17dp"/>
+        android:textSize="17sp"/>
 
     <LinearLayout
         android:id="@+id/layout1"

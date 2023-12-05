@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Produk">
+    tools:context=".Add_Produk"
+    android:background="@color/purple">
+    
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="83dp"
@@ -18,10 +20,11 @@
         android:layout_centerHorizontal="true">
 
         <ImageView
+            android:id="@+id/btm_kembali_addbrg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/kembali"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"/>
 
         <TextView
@@ -34,10 +37,118 @@
             android:layout_marginTop="10dp"/>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ll2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/ll1">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Produk"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/add_edittext"
+                android:text="Laptop"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskirpsi"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="129dp"
+                android:background="@drawable/add_edittext"
+                android:text="Ini merupakan laptop bertipe josss mantap jiwa jos gandos icikiwir aselole" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/add_edittext"
+                android:text="12"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categori"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/Spiner_Items"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Variant"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_Addbarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/ll2"
+        android:layout_centerInParent="true"
+        android:text="insert"
+        android:fontFamily="@font/brygada"
+        android:textSize="16sp" />
 
 </RelativeLayout>
