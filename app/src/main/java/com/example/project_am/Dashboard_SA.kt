@@ -6,11 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 
 class Dashboard_SA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard_sa)
+
+        val textViewUsername = findViewById<TextView>(R.id.username)
+
+        val username = intent.getStringExtra("username")
+
+        textViewUsername.text = "$username"
+
 
         val btn_profile = findViewById<ImageButton>(R.id.btn_profile)
         val btn_search = findViewById<Button>(R.id.btn_search)
@@ -43,6 +51,7 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent (this, Edit_Category::class.java)
             startActivity(intent)
         }*/
+
 
 
     }
