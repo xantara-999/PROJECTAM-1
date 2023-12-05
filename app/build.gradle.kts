@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -31,7 +32,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -44,4 +45,26 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //Room components
+    val room_version = "2.5.0"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    androidTestImplementation("androidx.room:room-testing:$room_version")
+/*
+    //Lifecycle components
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    //Kotlin Components
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")*/
+
+
+
 }
+
+
+
+

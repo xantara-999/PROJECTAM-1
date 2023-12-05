@@ -60,7 +60,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/add_edittext"
                 android:text="Laptop"
                 android:textSize="20sp"/>
         </LinearLayout>
@@ -79,7 +78,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="129dp"
-                android:background="@drawable/add_edittext"
                 android:text="Ini merupakan laptop bertipe josss mantap jiwa jos gandos icikiwir aselole" />
         </LinearLayout>
         <LinearLayout
@@ -97,7 +95,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/add_edittext"
                 android:text="12"
                 android:textSize="20sp"/>
         </LinearLayout>
@@ -117,7 +114,6 @@
                 android:id="@+id/spinner2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:entries="@array/Spiner_Items"
                 />
 
         </LinearLayout>
