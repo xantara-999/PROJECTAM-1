@@ -13,10 +13,10 @@ class Profile : AppCompatActivity() {
         val btn_ubahpass = findViewById<Button>(R.id.btn_ubahpass)
         val btn_keluar = findViewById<Button>(R.id.btn_keluar)
 
-/*        btn_ubahpass.setOnClickListener{
+        btn_ubahpass.setOnClickListener{
             val intent = Intent (this, UbahPass::class.java)
             startActivity(intent)
-        }*/
+        }
         btn_keluar.setOnClickListener{
             val intent = Intent (this, Login::class.java)
             startActivity(intent)

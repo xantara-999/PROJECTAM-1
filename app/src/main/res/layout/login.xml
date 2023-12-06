@@ -110,13 +110,16 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/edit_password"
         android:layout_centerInParent="true"
         android:layout_marginBottom="-81dp"
         android:fontFamily="@font/brygada"
+        android:background="@drawable/round_btn"
         android:text="LOGIN"
-        android:textSize="16sp" />
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple"/>
 
 </RelativeLayout>
