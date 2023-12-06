@@ -3,14 +3,15 @@ package com.example.project_am
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 
-class Add_Produk : AppCompatActivity() {
+class Add_categori : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_produk)
+        setContentView(R.layout.activity_add_categori)
 
-        val btnkeluar = findViewById<ImageButton>(R.id.btnprdk)
+        val btnkeluar = findViewById<ImageButton>(R.id.btn1)
 
 
         btnkeluar.setOnClickListener{

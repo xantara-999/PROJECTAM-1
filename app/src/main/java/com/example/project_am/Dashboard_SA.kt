@@ -31,6 +31,18 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent (this, Profile::class.java)
             startActivity(intent)
         }
+        btn_editp.setOnClickListener{
+            val intent = Intent (this, Add_Produk::class.java)
+            startActivity(intent)
+        }
+        btn_riwayat.setOnClickListener{
+            val intent = Intent (this, Riwayat_Produk::class.java)
+            startActivity(intent)
+        }
+        btn_editcat.setOnClickListener {
+            val intent = Intent(this, Add_categori::class.java)
+            startActivity(intent)
+        }
 /*        btn_search.setOnClickListener{
             val intent = Intent (this, Search::class.java)
             startActivity(intent)
@@ -39,17 +51,7 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent (this, Summary::class.java)
             startActivity(intent)
         }
-        btn_editp.setOnClickListener{
-            val intent = Intent (this, Edit_Product_SA::class.java)
-            startActivity(intent)
-        }
-        btn_riwayat.setOnClickListener{
-            val intent = Intent (this, Riwayat::class.java)
-            startActivity(intent)
-        }
-        btn_editcat.setOnClickListener{
-            val intent = Intent (this, Edit_Category::class.java)
-            startActivity(intent)
+
         }*/
 
 
