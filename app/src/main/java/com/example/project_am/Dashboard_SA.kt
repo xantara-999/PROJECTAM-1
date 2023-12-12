@@ -7,17 +7,26 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
 
 class Dashboard_SA : AppCompatActivity() {
+    lateinit var textUsername: TextView
+
+    val firebaseAuth = FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard_sa)
 
-        val textViewUsername = findViewById<TextView>(R.id.username)
+        textUsername = findViewById(R.id.username)
 
-        val username = intent.getStringExtra("username")
-
-        textViewUsername.text = "$username"
+        val firebasedashboard = firebaseAuth.currentUser
+        if(firebasedashboard!=null){
+            textUsername.text = firebasedashboard.email
+        }else{
+            startActivity(Intent(this, Login::class.java))
+            finish()
+        }
 
 
         val btn_profile = findViewById<ImageButton>(R.id.btn_profile)
