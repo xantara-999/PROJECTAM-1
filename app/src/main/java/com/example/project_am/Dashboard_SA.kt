@@ -52,6 +52,10 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent(this, Add_categori::class.java)
             startActivity(intent)
         }
+        btn_summary.setOnClickListener{
+            val intent = Intent (this, Summary::class.java)
+            startActivity(intent)
+        }
 /*        btn_search.setOnClickListener{
             val intent = Intent (this, Search::class.java)
             startActivity(intent)

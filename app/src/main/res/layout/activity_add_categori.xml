@@ -37,5 +37,25 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:padding="15dp">
+        <EditText
+            android:id="@+id/namaCategori"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:hint="Masukan Categori"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnsimpan"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:layout_below="@+id/txf"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

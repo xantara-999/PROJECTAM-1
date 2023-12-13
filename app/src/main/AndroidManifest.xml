@@ -30,8 +30,12 @@
         <activity
             android:name=".Add_Produk"
             android:exported="true">
-
         </activity>
+        <activity
+            android:name=".Summary"
+            android:exported="true">
+        </activity>
+
 
         <activity android:name=".UbahPass">
         </activity>
