@@ -6,7 +6,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:background="@drawable/bckdash" />
 
     <ImageButton
@@ -23,20 +23,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/image"
         android:contentDescription="Profile"/>
+    <TextView
+        android:id="@+id/usernameProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_image"/>
+
     <TextView
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_image"
+        android:layout_below="@id/usernameProfil"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/poppinsmed"
         android:text="Super Admin"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppinsmed"
-        android:layout_centerInParent="true"
-        android:textSize="30dp"
-        android:layout_marginTop="30dp"/>
+        android:textSize="30dp" />
+
 
     <LinearLayout
         android:id="@+id/layout"
