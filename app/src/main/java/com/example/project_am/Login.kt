@@ -1,53 +1,66 @@
 package com.example.project_am
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
+import com.google.firebase.auth.FirebaseAuth
 
-class Login : AppCompatActivity(), View.OnClickListener {
+class Login : AppCompatActivity() {
 
-    private lateinit var editTextUsername: EditText
-    private lateinit var editTextPassword: EditText
+    lateinit var editTextUsername: EditText
+    lateinit var editTextPassword: EditText
+    lateinit var btnlogin: Button
+    lateinit var progreslogin: ProgressDialog
 
+    var firebaseAuth = FirebaseAuth.getInstance()
+
+    override fun onStart() {
+        super.onStart()
+        if (firebaseAuth.currentUser!=null){
+            startActivity(Intent(this,Dashboard_SA::class.java))
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
-
-        val btnLogin = findViewById<Button>(R.id.btn_login)
         editTextUsername = findViewById(R.id.edit_email)
         editTextPassword = findViewById(R.id.edit_password)
+        btnlogin = findViewById(R.id.btn_login)
 
-        btnLogin.setOnClickListener(this)
-    }
+        progreslogin = ProgressDialog(this)
+        progreslogin.setTitle("Anda Berhasil Login")
+        progreslogin.setMessage("Silahkan Tunggu")
 
-    override fun onClick(view: View) {
-        when (view.id) {
-            R.id.btn_login -> {
-                val username = editTextUsername.text.toString().trim()
-                val password = editTextPassword.text.toString().trim()
-
-                if (ValidasiLogin(username, password)) {
-                    val intent = Intent(this, Dashboard_SA::class.java)
-                    intent.putExtra("username", username)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Username atau password tidak valid. Silakan cek kembali.", Toast.LENGTH_SHORT).show()
-                }
+        btnlogin.setOnClickListener{
+            if (editTextUsername.text.isNotEmpty()&&editTextPassword.text.isNotEmpty()){
+                ProsesLogin()
+            }else{
+                Toast.makeText(this,"Silahkan Masukan Email dan Password Terlebih Dahulu", LENGTH_SHORT).show()
             }
         }
     }
+    private fun ProsesLogin(){
+        val email = editTextUsername.text.toString()
+        val password = editTextPassword.text.toString()
 
-    private fun ValidasiLogin(username: String, password: String): Boolean {
-        val validCredentials = mapOf(
-            "Fahriza" to "password1",
-            "Dinda" to "password2",
-            "Royyan" to "password3"
-        )
-
-        return validCredentials[username] == password
+        progreslogin.show()
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnSuccessListener {
+                startActivity(Intent(this,Dashboard_SA::class.java))
+            }
+            .addOnFailureListener { error ->
+                Toast.makeText(this, error.localizedMessage, LENGTH_SHORT).show()
+            }
+            .addOnCompleteListener{
+                progreslogin.dismiss()
+            }
     }
+
+
+
 }

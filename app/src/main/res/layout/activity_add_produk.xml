@@ -19,12 +19,12 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:id="@+id/btm_kembali_addbrg"
+        <ImageButton
+            android:id="@+id/btnprdk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/kembali"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"/>
 
         <TextView
