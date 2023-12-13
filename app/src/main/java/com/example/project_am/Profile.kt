@@ -16,10 +16,17 @@ class Profile : AppCompatActivity() {
         val btnkembali = findViewById<ImageButton>(R.id.btn_kembali)
 
 
+        btn_ubahpass.setOnClickListener{
+            val intent = Intent (this, UbahPass::class.java)
+            startActivity(intent)
+        }
+
+
         btnkembali.setOnClickListener{
             val intent = Intent (this, Dashboard_SA::class.java)
             startActivity(intent)
         }
+
 
         btn_keluar.setOnClickListener{
             val intent = Intent (this, Login::class.java)
