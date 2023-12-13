@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
@@ -17,6 +18,7 @@ class Login : AppCompatActivity() {
     lateinit var editTextPassword: EditText
     lateinit var btnlogin: Button
     lateinit var progreslogin: ProgressDialog
+    private lateinit var showPasswordCheckBox: CheckBox
 
     var firebaseAuth = FirebaseAuth.getInstance()
 
@@ -32,12 +34,21 @@ class Login : AppCompatActivity() {
         editTextUsername = findViewById(R.id.edit_email)
         editTextPassword = findViewById(R.id.edit_password)
         btnlogin = findViewById(R.id.btn_login)
+        showPasswordCheckBox = findViewById(R.id.showpass)
 
         editTextPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
 
         progreslogin = ProgressDialog(this)
         progreslogin.setTitle("Anda Berhasil Login")
         progreslogin.setMessage("Silahkan Tunggu")
+
+        showPasswordCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            editTextPassword.inputType =
+                if (isChecked) InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                else InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+            editTextPassword.setSelection(editTextPassword.text.length)
+        }
 
         btnlogin.setOnClickListener{
             if (editTextUsername.text.isNotEmpty()&&editTextPassword.text.isNotEmpty()){
