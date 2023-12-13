@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,7 @@ class Summary : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.summary)
 
+        val btnkeluar = findViewById<ImageButton>(R.id.btn1)
         recyclerView = findViewById(R.id.rv)
         fab = findViewById(R.id.fab)
 
@@ -36,6 +38,10 @@ class Summary : AppCompatActivity() {
 
         fab.setOnClickListener{
             startActivity(Intent(this,Add_categori::class.java))
+        }
+        btnkeluar.setOnClickListener {
+            val intent = Intent(this, Dashboard_SA::class.java)
+            startActivity(intent)
         }
     }
 
