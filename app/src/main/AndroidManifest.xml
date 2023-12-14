@@ -13,7 +13,13 @@
         android:theme="@style/Theme.Project_AM"
         tools:targetApi="31">
         <activity
+            android:name=".Variant"
+            android:exported="false" />
+        <activity
             android:name=".Produk"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCategori"
             android:exported="false" />
         <activity
             android:name=".Riwayat_Produk"
@@ -26,24 +32,19 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".UbahPass"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Add_Produk"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Summary"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity android:name=".Dashboard_SA" />
         <activity android:name=".Profile" />
     </application>

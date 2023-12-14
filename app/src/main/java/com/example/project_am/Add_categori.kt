@@ -45,7 +45,7 @@ class Add_categori : AppCompatActivity() {
 
 
         btnkeluar.setOnClickListener{
-            val intent = Intent (this, Dashboard_SA::class.java)
+            val intent = Intent (this, Variant::class.java)
             startActivity(intent)
         }
     }

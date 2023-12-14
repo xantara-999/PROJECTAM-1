@@ -26,7 +26,7 @@ class Summary : AppCompatActivity() {
         setContentView(R.layout.summary)
 
         val btnkeluar = findViewById<ImageButton>(R.id.btn1)
-        recyclerView = findViewById(R.id.rv)
+        recyclerView = findViewById(R.id.recyclerCategori)
         fab = findViewById(R.id.fab)
 
         database = Appdatabase.getInstance(applicationContext)
@@ -40,7 +40,7 @@ class Summary : AppCompatActivity() {
             startActivity(Intent(this,Add_categori::class.java))
         }
         btnkeluar.setOnClickListener {
-            val intent = Intent(this, Dashboard_SA::class.java)
+            val intent = Intent(this, Variant::class.java)
             startActivity(intent)
         }
     }

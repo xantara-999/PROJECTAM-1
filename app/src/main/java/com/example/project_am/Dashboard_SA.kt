@@ -53,7 +53,7 @@ class Dashboard_SA : AppCompatActivity() {
             startActivity(intent)
         }
         btn_summary.setOnClickListener{
-            val intent = Intent (this, Summary::class.java)
+            val intent = Intent (this, MenuCategori::class.java)
             startActivity(intent)
         }
 /*        btn_search.setOnClickListener{
