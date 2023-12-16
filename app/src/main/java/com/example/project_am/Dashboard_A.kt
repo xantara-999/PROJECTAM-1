@@ -19,34 +19,25 @@ class Dashboard_A : AppCompatActivity() {
         val email = intent.getStringExtra("EMAIL")
 
         // Menampilkan email di TextView
-        emailTextView.text = "Email: $email"
+        emailTextView.text = "$email"
 
 
         val btn_profile = findViewById<ImageButton>(R.id.btn_profile)
-        val btn_search = findViewById<Button>(R.id.btn_search)
         val btn_summary = findViewById<Button>(R.id.btn_summary)
-        val btn_editp = findViewById<Button>(R.id.btn_editprdct)
-        val btn_riwayat = findViewById<Button>(R.id.btn_riwayat)
+        val btn_produk = findViewById<Button>(R.id.btn_riwayat)
+
 
 
         btn_profile.setOnClickListener{
-            val intent = Intent (this, Profile::class.java)
+            val intent = Intent (this, Profile_A::class.java)
             startActivity(intent)
         }
-        btn_editp.setOnClickListener{
-            val intent = Intent (this, Add_Produk::class.java)
-            startActivity(intent)
-        }
-        btn_riwayat.setOnClickListener{
-            val intent = Intent (this, Riwayat_Produk::class.java)
+        btn_produk.setOnClickListener{
+            val intent = Intent (this, Tampil_Produk::class.java)
             startActivity(intent)
         }
         btn_summary.setOnClickListener{
             val intent = Intent (this, MenuCategori::class.java)
-            startActivity(intent)
-        }
-        btn_search.setOnClickListener{
-            val intent = Intent (this, Tampil_Produk::class.java)
             startActivity(intent)
         }
     }

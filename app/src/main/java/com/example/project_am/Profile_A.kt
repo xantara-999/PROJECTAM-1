@@ -15,7 +15,7 @@ class Profile_A : AppCompatActivity() {
         val btn_keluar = findViewById<Button>(R.id.btn_keluar)
         val btnkembali = findViewById<ImageButton>(R.id.btn_kembali)
         btnkembali.setOnClickListener{
-            val intent = Intent (this, Dashboard_SA::class.java)
+            val intent = Intent (this, Dashboard_A::class.java)
             startActivity(intent)
         }
 

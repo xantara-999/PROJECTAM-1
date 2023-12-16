@@ -30,10 +30,9 @@ class Dashboard_SA : AppCompatActivity() {
 
 
         val btn_profile = findViewById<ImageButton>(R.id.btn_profile)
-        val btn_search = findViewById<Button>(R.id.btn_search)
         val btn_summary = findViewById<Button>(R.id.btn_summary)
         val btn_editp = findViewById<Button>(R.id.btn_editprdct)
-        val btn_riwayat = findViewById<Button>(R.id.btn_riwayat)
+        val btn_produk = findViewById<Button>(R.id.btn_produk)
         val btn_editcat = findViewById<Button>(R.id.btn_editcat)
 
         btn_profile.setOnClickListener{
@@ -44,8 +43,8 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent (this, Add_Produk::class.java)
             startActivity(intent)
         }
-        btn_riwayat.setOnClickListener{
-            val intent = Intent (this, Riwayat_Produk::class.java)
+        btn_produk.setOnClickListener{
+            val intent = Intent (this, Tampil_Produk::class.java)
             startActivity(intent)
         }
         btn_editcat.setOnClickListener {
@@ -56,12 +55,5 @@ class Dashboard_SA : AppCompatActivity() {
             val intent = Intent (this, MenuCategori::class.java)
             startActivity(intent)
         }
-        btn_search.setOnClickListener{
-            val intent = Intent (this, Tampil_Produk::class.java)
-            startActivity(intent)
-        }
-
-
-
     }
 }

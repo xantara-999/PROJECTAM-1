@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 
 class MenuCategori : AppCompatActivity() {
+    private lateinit var btnKeluar: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_categori)
@@ -47,8 +48,8 @@ class MenuCategori : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnkeluar = findViewById<ImageButton>(R.id.btn1)
-        btnkeluar.setOnClickListener {
+        btnKeluar = findViewById(R.id.btn1)
+        btnKeluar.setOnClickListener {
             finish()
         }
     }
