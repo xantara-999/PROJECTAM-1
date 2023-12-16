@@ -51,36 +51,19 @@
         android:textStyle="bold"
         android:fontFamily="@font/inter"
         android:textSize="40sp"
+        android:text="Welcome Back,"
         android:layout_marginLeft="40dp"
         android:layout_below="@+id/hello"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/image"
+        android:id="@+id/space"></Space>
 
-
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="65dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/image"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/round_btn"
-        android:drawableBottom="@drawable/search"
-        android:gravity="center"
-        android:padding="10dp"
-        android:contentDescription="Tombol Pencarian"/>
-    <TextView
-        android:id="@+id/search_prdct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_search"
-        android:layout_centerInParent="true"
-        android:text="Cari Produk"
-        android:textColor="@color/white"
-        android:fontFamily="@font/inknut"
-        android:textSize="17sp"/>
 
     <LinearLayout
         android:id="@+id/layout1"
-        android:layout_below="@id/search_prdct"
+        android:layout_below="@id/space"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -118,6 +101,7 @@
             android:gravity="center">
 
             <Button
+
                 android:id="@+id/btn_editprdct"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
@@ -130,7 +114,7 @@
                 android:id="@+id/editprdct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit Produk"
+                android:text="Edit Product"
                 android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
@@ -141,7 +125,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
-<!--
 
         <LinearLayout
             android:layout_width="0dp"
@@ -151,11 +134,12 @@
             android:gravity="center">
 
             <Button
+
                 android:id="@+id/btn_riwayat"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:background="@drawable/rect_btn"
-                android:drawableTop="@drawable/riwayat"
+                android:drawableTop="@drawable/search"
                 android:padding="14dp"
                 android:contentDescription="Tombol Riwayat Produk"/>
 
@@ -163,11 +147,8 @@
                 android:id="@+id/riwayattxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Riwayat Produk"
+                android:text="Product"
                 android:textColor="@android:color/black" />
         </LinearLayout>
--->
-
-
     </LinearLayout>
 </RelativeLayout>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Project_AM"
         tools:targetApi="31">
         <activity
+            android:name=".MenuCategory_Admin"
+            android:exported="false" />
+        <activity
             android:name=".Profile_A"
             android:exported="false" />
         <activity
@@ -73,10 +76,7 @@
             android:name=".MenuCategori"
             android:exported="false" />
         <activity
-            android:name=".Riwayat_Produk"
-            android:exported="false" />
-        <activity
-            android:name="Add_Produk"
+            android:name=".Add_Produk"
             android:exported="false" />
     </application>
 

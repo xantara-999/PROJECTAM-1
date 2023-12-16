@@ -7,12 +7,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
-import androidx.room.Room
 import com.example.project_am.data.Appdatabase
-import com.example.project_am.data.dao.ProductDao
 import com.example.project_am.data.entity.Product
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+
 
 class Add_Produk : AppCompatActivity() {
     private lateinit var database: Appdatabase

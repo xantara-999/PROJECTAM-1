@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    tools:context=".MenuCategori"
->
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuCategory_Admin">
 
     <LinearLayout
         android:id="@+id/appBarLayout"
@@ -15,7 +14,7 @@ android:layout_height="match_parent"
         android:layout_centerHorizontal="true">
 
         <ImageButton
-            android:id="@+id/btn1"
+            android:id="@+id/btn2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/kembali"

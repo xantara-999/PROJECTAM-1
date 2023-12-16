@@ -12,8 +12,7 @@ class Variant_Medical : AppCompatActivity() {
 
         val btnkeluar = findViewById<ImageButton>(R.id.btn1)
         btnkeluar.setOnClickListener {
-            val intent = Intent(this, MenuCategori::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
