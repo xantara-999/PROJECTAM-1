@@ -106,7 +106,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:background="@drawable/rect_btn"
-                android:drawableTop="@drawable/editprdct"
+                android:drawableTop="@drawable/prdkout"
                 android:padding="14dp"
                 android:contentDescription="Tombol Edit Produk"/>
 
@@ -114,7 +114,7 @@
                 android:id="@+id/editprdct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit Product"
+                android:text="Product Out"
                 android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
