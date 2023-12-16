@@ -7,7 +7,6 @@
     tools:context=".Login"
     android:background="@color/purple"
     >
-
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
@@ -32,6 +31,7 @@
         android:id="@+id/gambar"
         android:layout_width="match_parent"
         android:layout_height="265dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="114dp"
         android:background="@drawable/gbrlog" />
@@ -44,9 +44,10 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="-22dp"
         android:fontFamily="@font/brygada"
-        android:text="LOGIN SUPER ADMIN"
+        android:text="LOGIN ADMIN"
         android:textColor="@color/black"
         android:textSize="27dp"
+        android:gravity="center"
         android:textStyle="bold" />
 
     <TextView

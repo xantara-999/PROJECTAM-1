@@ -56,13 +56,8 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     androidTestImplementation("androidx.room:room-testing:$room_version")
-/*
-    //Lifecycle components
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-common-java8:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    //Kotlin Components
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")*/
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics")

@@ -13,22 +13,16 @@
         android:theme="@style/Theme.Project_AM"
         tools:targetApi="31">
         <activity
-            android:name=".Variant"
+            android:name=".Profile_A"
             android:exported="false" />
         <activity
-            android:name=".Produk"
+            android:name=".Tampil_Produk"
             android:exported="false" />
         <activity
-            android:name=".MenuCategori"
+            android:name=".Under_Development"
             android:exported="false" />
         <activity
-            android:name=".Riwayat_Produk"
-            android:exported="false" />
-        <activity
-            android:name=".Add_categori"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
+            android:name=".Start_Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,16 +31,53 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".UbahPass"
-            android:exported="true" />
+            android:exported="false" />
         <activity
-            android:name=".Add_Produk"
-            android:exported="true" />
+            android:name=".Dashboard_SA"
+            android:exported="false" />
         <activity
-            android:name=".Summary"
-            android:exported="true" />
-        <activity android:name=".Dashboard_SA" />
-        <activity android:name=".Profile" />
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard_A"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Sports"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Accessories"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Tools"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Medical"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Kitchen"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Office"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Admin"
+            android:exported="false" />
+        <activity
+            android:name=".Variant_Electronic"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCategori"
+            android:exported="false" />
+        <activity
+            android:name=".Riwayat_Produk"
+            android:exported="false" />
+        <activity
+            android:name="Add_Produk"
+            android:exported="false" />
     </application>
 
 </manifest>

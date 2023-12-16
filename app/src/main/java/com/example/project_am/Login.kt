@@ -8,6 +8,7 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.auth.FirebaseAuth
@@ -49,7 +50,11 @@ class Login : AppCompatActivity() {
 
             editTextPassword.setSelection(editTextPassword.text.length)
         }
-
+        val btnback = findViewById<Button>(R.id.btn_back)
+        btnback.setOnClickListener {
+            val intent = Intent(this, Start_Login::class.java)
+            startActivity(intent)
+        }
         btnlogin.setOnClickListener{
             if (editTextUsername.text.isNotEmpty()&&editTextPassword.text.isNotEmpty()){
                 ProsesLogin()

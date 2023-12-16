@@ -4,12 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.project_am.data.dao.CategoriDao
-import com.example.project_am.data.entity.entityCategori
+import com.example.project_am.data.dao.ProductDao
+import com.example.project_am.data.entity.Product
 
-@Database(entities = [entityCategori::class], version = 1)
+@Database(entities = [Product::class], version = 1)
 abstract class Appdatabase : RoomDatabase() {
-    abstract fun CategoriDao(): CategoriDao
+    abstract fun productDao(): ProductDao
 
     companion object{
         private var instance: Appdatabase? = null

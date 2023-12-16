@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Summary">
-
+    tools:context=".Tampil_Produk">
     <ImageView
+        android:contentDescription="background"
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:src="@drawable/top_background"/>
@@ -23,32 +23,25 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/kembali"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:contentDescription="Tombol Kembali"/>
+            android:layout_marginStart="20dp"
+            android:contentDescription="Tombol Kembali"
+            android:layout_gravity="center_vertical"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Produk"
-            android:textSize="50dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"/>
+            android:textSize="50sp"
+            android:layout_marginStart="60dp"
+            android:gravity="center_horizontal"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerCategori"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerProduk"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ll1"/>
+        android:layout_below="@+id/ll1" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:contentDescription="Add categori"/>
+
 </RelativeLayout>
