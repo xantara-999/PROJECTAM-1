@@ -14,8 +14,7 @@ class Under_Development : AppCompatActivity() {
 
         val btn_back = findViewById<Button>(R.id.btn_back)
         btn_back.setOnClickListener {
-            val intent = Intent(this, Dashboard_SA::class.java)
-            startActivity(intent)
+        finish()
         }
     }
 }

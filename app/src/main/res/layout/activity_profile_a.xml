@@ -37,6 +37,7 @@
         android:fontFamily="@font/inter"
         android:layout_marginTop="30dp"
         android:textSize="40sp"
+        android:text="tim2@gmail.com"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/btn_image"/>
 
