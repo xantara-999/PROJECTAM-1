@@ -11,6 +11,9 @@ import com.example.project_am.data.entity.Product
 interface ProductDao {
     @Query("SELECT * FROM Product")
     fun getAllProducts(): List<Product>
+
+    @Query("SELECT * FROM Product WHERE product_name LIKE '%' || :search || '%'")
+    fun searchProducts(search: String): List<Product>
     @Insert
      fun insertProduct(vararg product: Product)
     @Update

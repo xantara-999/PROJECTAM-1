@@ -6,6 +6,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,12 +25,16 @@ class Tampil_Produk : AppCompatActivity() {
     private lateinit var adapter: ProductAdapter
     private lateinit var database: Appdatabase
     private lateinit var btnKeluar: ImageButton
+    private lateinit var editsearch: TextView
+    private lateinit var btn_search: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tampil_produk)
         btnKeluar = findViewById(R.id.btn1)
         recyclerView = findViewById(R.id.recyclerProduk)
+        editsearch = findViewById(R.id.text_Search)
+        btn_search = findViewById(R.id.btnsearch)
 
         database= Appdatabase.getInstance((applicationContext))
         adapter= ProductAdapter(list)
@@ -63,6 +71,15 @@ class Tampil_Produk : AppCompatActivity() {
         btnKeluar.setOnClickListener{
             finish()
         }
+        btn_search.setOnClickListener{
+            if (editsearch.text.isNotEmpty()){
+                searchproduk(editsearch.text.toString())
+            }else{
+                getData()
+            }
+
+
+        }
     }
 
     override fun onResume() {
@@ -73,6 +90,12 @@ class Tampil_Produk : AppCompatActivity() {
     fun getData(){
         list.clear()
         list.addAll(database.productDao().getAllProducts())
+        adapter.notifyDataSetChanged()
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    fun searchproduk(search: String){
+        list.clear()
+        list.addAll(database.productDao().searchProducts(search))
         adapter.notifyDataSetChanged()
     }
     }
