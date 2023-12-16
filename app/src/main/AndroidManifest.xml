@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Project_AM"
         tools:targetApi="31">
         <activity
-            android:name=".Profil_Admin"
-            android:exported="false" />
-        <activity
             android:name=".Profile_A"
             android:exported="false" />
         <activity

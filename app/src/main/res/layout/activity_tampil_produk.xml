@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tampil_Produk">
+    tools:context=".Tampil_Produk"
+    android:background="@color/purple">
     <ImageView
         android:contentDescription="background"
         android:layout_width="match_parent"
