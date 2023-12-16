@@ -61,7 +61,7 @@ class Tampil_Produk : AppCompatActivity() {
         recyclerView.addItemDecoration(DividerItemDecoration(applicationContext, VERTICAL))
 
         btnKeluar.setOnClickListener{
-            startActivity(Intent(this, Dashboard_SA::class.java))
+            finish()
         }
     }
 

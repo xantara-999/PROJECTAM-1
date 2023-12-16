@@ -49,8 +49,7 @@ class MenuCategori : AppCompatActivity() {
 
         val btnkeluar = findViewById<ImageButton>(R.id.btn1)
         btnkeluar.setOnClickListener {
-            val intent = Intent(this, Dashboard_SA::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }

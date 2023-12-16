@@ -87,8 +87,7 @@ class Add_Produk : AppCompatActivity() {
         }
 
         btnkeluar.setOnClickListener{
-            val intent = Intent (this, Dashboard_SA::class.java)
-            startActivity(intent)
+        finish()
         }
 
     }
